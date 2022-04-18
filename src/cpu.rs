@@ -212,7 +212,6 @@ impl Cpu {
             }
             (0xB, _, _, _) => {
                 // Jump to nnn + <V0>, i.e. set programm counter to nnn + <V0>
-                let mut rng = rand::thread_rng();
                 self.pc = nnn + self.v[0] as u16;
             }
             (0xC, _, _, _) => {
